@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01_Controls", "01_Controls\01_Controls.csproj", "{F821D59F-4E20-4EAE-8E9F-BFEADF7A564B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01_Controls", "01_Controls\01_Controls.csproj", "{F821D59F-4E20-4EAE-8E9F-BFEADF7A564B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02_MarginPadding", "02_MarginPadding\02_MarginPadding.csproj", "{2269BA4B-63BC-4F36-955A-2E0B1E113646}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{F821D59F-4E20-4EAE-8E9F-BFEADF7A564B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F821D59F-4E20-4EAE-8E9F-BFEADF7A564B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F821D59F-4E20-4EAE-8E9F-BFEADF7A564B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2269BA4B-63BC-4F36-955A-2E0B1E113646}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2269BA4B-63BC-4F36-955A-2E0B1E113646}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2269BA4B-63BC-4F36-955A-2E0B1E113646}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2269BA4B-63BC-4F36-955A-2E0B1E113646}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

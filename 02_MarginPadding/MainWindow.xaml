@@ -1,0 +1,24 @@
+﻿<Window x:Class="_02_MarginPadding.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_02_MarginPadding"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <UniformGrid Columns="5">
+        <Button BorderThickness="10" BorderBrush="Red"></Button>
+        <Border Background="Yellow">
+            <Button Margin="5,10,15 20"></Button>
+        </Border>
+        <Button BorderBrush="Blue" BorderThickness="5,10,15,20"></Button>
+        <Border Background="Green">
+            <Button Margin="10"></Button>
+        </Border>
+        
+        <Button Background="Green" HorizontalAlignment="Center" VerticalAlignment="Center" 
+                FontSize="30" Padding="15">Button</Button>
+        <TextBox BorderThickness="2" BorderBrush="Black" Height="10"></TextBox>
+        <Image Source="img-worlds-of-adventure.jpg" Height="200" Width="500"></Image>
+    </UniformGrid>
+</Window>
