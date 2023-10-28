@@ -1,0 +1,143 @@
+﻿<Window x:Class="_03_AllControls.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_03_AllControls"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" >    
+    <!--AllowsTransparency="True" 
+        WindowStyle="None" WindowStartupLocation="CenterScreen"-->
+    <!--<StackPanel>
+        <ProgressBar Margin="10,35" Value="30" Height="30"
+                     Maximum="100" Minimum="0" IsIndeterminate="True"></ProgressBar>
+        <ProgressBar Margin="10,5" Value="50" Height="30" Name="progressBar"
+                     Maximum="100" Minimum="0"></ProgressBar>
+        <Button Margin="25" Padding="5" Width="300" FontSize="20" Click="Button_ClickStart">Start</Button>
+        <Button Margin="25" Padding="5" Width="300" FontSize="20" Click="Button_Click_Stop">Stop</Button>
+
+    </StackPanel>-->
+    <Window.Resources>
+        <ContextMenu x:Key="myContextMenu">
+            <MenuItem Header="1 MainWindow.xaml" IsCheckable="True" IsChecked="True"></MenuItem>
+            <MenuItem Header="2 MainWindow.xaml.cs" IsCheckable="True" ></MenuItem>
+            <MenuItem Header="3 App.xaml" IsChecked="True"></MenuItem>
+            <MenuItem Header="4 App.xaml.cs"></MenuItem>
+            <Slider HorizontalAlignment="Stretch" Width="100"></Slider>
+            <RadioButton>Type 1</RadioButton>
+            <RadioButton>Type 2</RadioButton>
+        </ContextMenu>
+    </Window.Resources>
+
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="File">
+                <MenuItem Header="New">
+                    <MenuItem.Icon>
+                        <Image Source="Resources\icons8-add-file-48.png"></Image>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="Project" InputGestureText="Ctrl+Shift+N" Click="MenuItem_Click"></MenuItem>
+                <MenuItem Header="Save as..." InputGestureText="Ctrl+S"></MenuItem>
+                <MenuItem  Header="Add" >
+                    <MenuItem Header="File">
+                        <MenuItem.Icon>
+                            <Image Source="Resources\icons8-add-file-48.png"></Image>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Header="Project"></MenuItem>
+                    <MenuItem Header="Solution"></MenuItem>
+                </MenuItem>
+                <Separator/>
+                <MenuItem Header="Close" InputGestureText="Alt+F4" Click="MenuItem_Click_1"></MenuItem>
+            </MenuItem>
+            <MenuItem Header="Window">
+                <MenuItem Header="1 MainWindow.xaml" IsCheckable="True" IsChecked="True"></MenuItem>
+                <MenuItem Header="2 MainWindow.xaml.cs" IsCheckable="True" ></MenuItem>
+                <MenuItem Header="3 App.xaml" IsChecked="True"></MenuItem>
+                <MenuItem Header="4 App.xaml.cs"></MenuItem>
+                <Slider HorizontalAlignment="Stretch" Width="100"></Slider>
+                <RadioButton>Type 1</RadioButton>
+                <RadioButton>Type 2</RadioButton>
+                
+            </MenuItem>
+            <MenuItem Header="Help"></MenuItem>
+            <Button Content="ContextMenu" ContextMenu="{StaticResource myContextMenu}"></Button>
+        </Menu>
+        <ToolBarTray DockPanel.Dock="Top">
+            <ToolBar >
+                <Button>Save</Button>
+                <Button>Save as</Button>
+                <Button>Open</Button>
+                <Separator/>
+                <Button>Cut</Button>
+                <Button>Copy</Button>
+                <Button>Paste</Button>
+                <CheckBox>Mute:</CheckBox>
+                <Label>Volume :</Label>
+                <Slider VerticalAlignment="Center" Width="100"></Slider>
+            </ToolBar>
+            <ToolBar >
+                <Button>Save</Button>
+                <Button>Save as</Button>
+                <Button>Open</Button>
+                <Separator/>
+                <Button ToolBar.OverflowMode="Always">Cut</Button>
+                <Button>Copy</Button>
+                <Button>Paste</Button>
+                <Border ToolBar.OverflowMode="Never" >
+                    <CheckBox>Mute:</CheckBox>
+                </Border>
+                <Label>Volume :</Label>
+                <Slider VerticalAlignment="Center" Width="100"></Slider>
+            </ToolBar>
+        </ToolBarTray>
+      
+        <Grid DockPanel.Dock="Top">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <Slider Maximum="100" Minimum="0" Width="500" Value="10" Margin="30" 
+                ToolTip="Slide me"></Slider>
+            <Slider Grid.Row="1" Width="500" TickFrequency="10" TickPlacement="Both"
+                 Maximum="100" Minimum="0"
+                Margin="30" >
+                <Slider.ToolTip>
+                    <TextBlock>
+                    <Span Foreground="Red">Red</Span>
+                    <Span Foreground="Blue">Blue</Span>
+                    <Span Foreground="Green">Green</Span>
+                    </TextBlock>
+                </Slider.ToolTip>
+            </Slider>
+            <Slider Grid.Row="2" Width="500" Maximum="100" Ticks="0,5,10,15,25,50,100"
+                TickPlacement="TopLeft" IsSnapToTickEnabled="True"
+                Margin="30"  Value="10"
+                ></Slider>
+            <Slider Grid.Row="3" Width="500" Margin="30"  Maximum="100"
+                IsSelectionRangeEnabled="True" TickFrequency="10" TickPlacement="BottomRight"
+                SelectionStart="35" SelectionEnd="75" Value="20"
+                AutoToolTipPlacement="BottomRight"
+                ></Slider>
+            <Slider Grid.Row="0" Grid.Column="1" Margin="30" 
+                Orientation="Vertical" Grid.RowSpan="4" Maximum="100"
+                Value="100" TickFrequency="25" TickPlacement="BottomRight"
+                ValueChanged="Slider_ValueChanged" Name="slider"></Slider>
+
+
+        </Grid>
+        <StatusBar DockPanel.Dock="Bottom" Background="#FFBAF0F0" Height="30">
+            <Label >Status : Normal</Label>
+            <Label>Time   : 33s</Label>            
+        </StatusBar>
+
+    </DockPanel>
+
+</Window>

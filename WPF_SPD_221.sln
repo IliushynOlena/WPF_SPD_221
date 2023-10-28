@@ -5,7 +5,17 @@ VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01_Controls", "01_Controls\01_Controls.csproj", "{F821D59F-4E20-4EAE-8E9F-BFEADF7A564B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02_MarginPadding", "02_MarginPadding\02_MarginPadding.csproj", "{2269BA4B-63BC-4F36-955A-2E0B1E113646}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02_MarginPadding", "02_MarginPadding\02_MarginPadding.csproj", "{2269BA4B-63BC-4F36-955A-2E0B1E113646}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03_AllControls", "03_AllControls\03_AllControls.csproj", "{66AAF609-983F-4C50-AB22-C20F2BB388D2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05_ShulteTable", "05_ShulteTable\05_ShulteTable.csproj", "{FA65D7AD-E527-4380-95CD-3923A7B8A189}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06_Collections", "06_Collections\06_Collections.csproj", "{C7780ED6-555D-439D-889B-6A426130F21C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07_ListControls", "07_ListControls\07_ListControls.csproj", "{E7EF5309-F990-48D3-B062-CD941E728774}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08_ListBox", "08_ListBox\08_ListBox.csproj", "{EFCB217F-0A05-454A-85CF-9606994AAF50}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +31,26 @@ Global
 		{2269BA4B-63BC-4F36-955A-2E0B1E113646}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2269BA4B-63BC-4F36-955A-2E0B1E113646}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2269BA4B-63BC-4F36-955A-2E0B1E113646}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66AAF609-983F-4C50-AB22-C20F2BB388D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66AAF609-983F-4C50-AB22-C20F2BB388D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66AAF609-983F-4C50-AB22-C20F2BB388D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66AAF609-983F-4C50-AB22-C20F2BB388D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA65D7AD-E527-4380-95CD-3923A7B8A189}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA65D7AD-E527-4380-95CD-3923A7B8A189}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA65D7AD-E527-4380-95CD-3923A7B8A189}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA65D7AD-E527-4380-95CD-3923A7B8A189}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7780ED6-555D-439D-889B-6A426130F21C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7780ED6-555D-439D-889B-6A426130F21C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7780ED6-555D-439D-889B-6A426130F21C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7780ED6-555D-439D-889B-6A426130F21C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7EF5309-F990-48D3-B062-CD941E728774}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7EF5309-F990-48D3-B062-CD941E728774}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7EF5309-F990-48D3-B062-CD941E728774}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7EF5309-F990-48D3-B062-CD941E728774}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFCB217F-0A05-454A-85CF-9606994AAF50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFCB217F-0A05-454A-85CF-9606994AAF50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFCB217F-0A05-454A-85CF-9606994AAF50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFCB217F-0A05-454A-85CF-9606994AAF50}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
