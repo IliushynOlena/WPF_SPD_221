@@ -22,15 +22,27 @@ namespace _11_PhoneBook
     public partial class MainWindow : Window
     {
         ViewModel model = new ViewModel();
+        
         public MainWindow()
         {
             InitializeComponent();         
             this.DataContext = model;
+            
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             model.DeleteSelectedContact();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            model.DublicateContact();
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            model.DeleteAllContact();
         }
     }
     class ViewModel
@@ -47,13 +59,22 @@ namespace _11_PhoneBook
         //public ObservableCollection<Contact> Contacts { get { return contacts; } }
         public IEnumerable<Contact> Contacts => contacts;
 
-        public Contact SelectedContact { get; set; }
+        public Contact SelectedContact { get; set; }//address
 
         public void DeleteSelectedContact()
         {
             if(SelectedContact != null)
                 contacts.Remove(SelectedContact);
         }
-
+        public void DublicateContact()
+        {
+            if(SelectedContact != null)
+                contacts.Add(SelectedContact.Clone());
+        }
+        public void DeleteAllContact()
+        {
+            if(contacts.Any())
+                contacts.Clear();
+        }
     }
 }

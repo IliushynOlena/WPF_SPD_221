@@ -1,0 +1,31 @@
+﻿<Window x:Class="_12_FileManager.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_12_FileManager" 
+        d:DataContext="{d:DesignInstance Type=local:ViewModel}"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="400">
+    <DockPanel Margin="7">
+        <DockPanel DockPanel.Dock="Top">
+            <Label>Directory :</Label>
+            <Button Padding="5,0" DockPanel.Dock="Right" Click="Button_Click">Browse</Button>
+            <TextBox Text="{Binding DirectoryFullName , Mode=OneWay}" Margin="5,0" VerticalContentAlignment="Center"></TextBox>
+        </DockPanel>
+        
+        <StackPanel DockPanel.Dock="Bottom">
+            <TextBlock TextAlignment="Center" FontSize="20">Information</TextBlock>
+            <TextBlock>Name : <Run Text="{Binding SelectedFile.Name,  Mode=OneWay}"></Run> </TextBlock>
+            <TextBlock>Size : <Run Text="{Binding SelectedFile.Length,  Mode=OneWay}"></Run> </TextBlock>
+            <TextBlock>Created : <Run Text="{Binding SelectedFile.CreationTime,  Mode=OneWay}"></Run></TextBlock>
+            <TextBlock>Modefied : <Run Text="{Binding SelectedFile.LastWriteTime,  Mode=OneWay}"></Run></TextBlock>
+            <TextBlock>Extension : <Run Text="{Binding SelectedFile.Extension ,  Mode=OneWay}"></Run></TextBlock>
+        </StackPanel>
+        <TextBlock DockPanel.Dock="Top" TextAlignment="Center" FontSize="20" >Files :</TextBlock>
+        <ListBox ItemsSource="{Binding Files}"
+                 SelectedItem="{Binding SelectedFile}"></ListBox>
+
+
+    </DockPanel>
+</Window>

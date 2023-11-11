@@ -16,24 +16,26 @@
                  Grid.Column="0" Background="#FF92CEE9"
                  HorizontalContentAlignment="Stretch"
                  ItemsSource="{Binding Path=Contacts}"
-                 SelectedItem="{Binding SelectedContact}">
+                 SelectedItem="{Binding SelectedContact}"
+                 DisplayMemberPath="FullName">
         </ListBox>
         <GridSplitter HorizontalAlignment="Center"
                       VerticalAlignment="Stretch"
                       Width="2" Grid.Column="1"></GridSplitter>
         <StackPanel Grid.Column="2" Background="#FF4F7694">
             <Label HorizontalAlignment="Center">Name</Label>
-            <TextBox Margin="20,0" Text="{Binding SelectedContact.Name }"></TextBox>
+            <TextBox Margin="20,0" Text="{Binding SelectedContact.Name, UpdateSourceTrigger=PropertyChanged}"></TextBox>
             <Label HorizontalAlignment="Center">Surname</Label>
-            <TextBox Margin="20,0" Text="{Binding SelectedContact.Surname }"></TextBox>
+            <TextBox Margin="20,0" Text="{Binding SelectedContact.Surname, UpdateSourceTrigger=PropertyChanged }"></TextBox>
             <Label HorizontalAlignment="Center">Age</Label>
             <TextBox Margin="20,0" Text="{Binding SelectedContact.Age }"></TextBox>
             <Label HorizontalAlignment="Center">Phone</Label>
             <TextBox  Margin="20,0" Text="{Binding SelectedContact.Phone }"></TextBox>
             <Label HorizontalAlignment="Left" Margin="20,0">Is Male:</Label>
             <CheckBox  Margin="20,0" IsChecked="{Binding Path=SelectedContact.IsMale}"></CheckBox>
-            <Button Background="#FF7EC97E" Margin="20,20,20,5">Create Contact Copy</Button>
+            <Button Background="#FF7EC97E" Margin="20,20,20,5" Click="Button_Click_1">Create Contact Copy</Button>
             <Button Background="PaleVioletRed" Margin="20,0" Click="Button_Click">Delete Selected Contact</Button>
+            <Button Background="PaleVioletRed" Margin="20,5" Click="Button_Click_2">Delete All</Button>
           
 
         </StackPanel>
