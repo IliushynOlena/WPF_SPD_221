@@ -26,8 +26,7 @@ namespace _11_PhoneBook
         public MainWindow()
         {
             InitializeComponent();         
-            this.DataContext = model;
-            
+            this.DataContext = model;            
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
